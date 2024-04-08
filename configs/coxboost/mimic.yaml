@@ -1,0 +1,11 @@
+# Coxboost
+n_estimators: 400
+learning_rate: 0.5
+max_depth: 5
+loss: 'coxph'
+min_samples_split: 0.7
+min_samples_leaf: 0.2
+max_features: 'auto'
+dropout_rate: 0.5
+subsample: 1.0
+random_state: 0

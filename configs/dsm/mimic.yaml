@@ -1,0 +1,4 @@
+# Network
+network_layers: [32, 64]
+learning_rate: 0.01
+n_iter: 500
