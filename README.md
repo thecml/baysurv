@@ -8,7 +8,7 @@ Evaluation is done using [SurvivalEval](https://github.com/shi-ang/SurvivalEVAL)
 
 <b>Preprint: TBA</b>
 
-<p align="left"><img src="https://github.com/thecml/baysurv/blob/main/img/bnn.png" width="40%" height="40%">
+<p align="left"><img src="https://github.com/thecml/baysurv/blob/main/img/bnn.png" width="60%" height="60%">
 
 In this paper, we study the benefits of modeling uncertainty in deep neural networks for survival analysis with a focus on prediction and calibration performance. For this, we present a Bayesian deep learning framework that consists of three probabilistic network architectures, which we train by optimizing the Cox partial likelihood and combining aleatoric and epistemic uncertainty.
 
