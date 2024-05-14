@@ -1,17 +1,16 @@
-# Probabilistic Survival Analysis by Approximate Bayesian Inference of Neural Networks
+# Efficient Training of Probabilistic Neural Networks for Survival Analysis
 
-This repository is the official TensorFlow implementation of "Probabilistic Survival Analysis by Approximate Bayesian Inference of Neural Networks", 2024.
+This repository is the official TensorFlow implementation of "Efficient Training of Probabilistic Neural Networks for Survival Analysis", 2024.
 
 The proposed method is implemented based on [TensorFlow Probability](https://github.com/tensorflow/probability).
 
-Evaluation is done using [SurvivalEval](https://github.com/shi-ang/SurvivalEVAL). Big thanks to the authors.
+Evaluation is done using [SurvivalEval](https://github.com/shi-ang/SurvivalEVAL). Thank you to the authors.
 
 <b>Preprint: TBA</b>
 
 <p align="left"><img src="https://github.com/thecml/baysurv/blob/main/img/bnn.png" width="60%" height="60%">
 
-In this paper, we study the benefits of modeling uncertainty in deep neural networks for survival analysis with a focus on prediction and calibration performance. For this, we present a Bayesian deep learning framework that consists of three probabilistic network architectures, which we train by optimizing the Cox partial likelihood and combining aleatoric and epistemic uncertainty.
-
+In the context of survival analysis using Bayesian modeling, we investigate whether non-VI techniques can offer comparable or possibly improved predictive performance and uncertainty calibration compared to VI.
 
 License
 --------
