@@ -1,12 +1,12 @@
 # Efficient Training of Probabilistic Neural Networks for Survival Analysis
 
-This repository is the official TensorFlow implementation of "Efficient Training of Probabilistic Neural Networks for Survival Analysis", 2024.
+This repository is the official TensorFlow implementation of "Efficient Training of Probabilistic Neural Networks for Survival Analysis", IEEE JBHI 2024.
 
 The proposed method is implemented based on [TensorFlow Probability](https://github.com/tensorflow/probability).
 
 Evaluation is done using [SurvivalEval](https://github.com/shi-ang/SurvivalEVAL). Thank you to the authors.
 
-<b>Preprint: TBA</b>
+Full paper: https://ieeexplore.ieee.org/document/10568314
 
 <p align="left"><img src="https://github.com/thecml/baysurv/blob/main/img/bnn.png" width="60%" height="60%">
 
@@ -53,4 +53,17 @@ Visualization
 - Run the notebook to plot the survival function and the predicted time to event:
 ```
 jupyter notebook model_inference.ipynb
+```
+
+Citation
+--------
+```
+@article{lillelund_efficient_2024,
+  author={Lillelund, Christian Marius and Magris, Martin and Pedersen, Christian Fischer},
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={Efficient Training of Probabilistic Neural Networks for Survival Analysis}, 
+  year={2024},
+  pages={1-10},
+  doi={10.1109/JBHI.2024.3417369}
+}
 ```
