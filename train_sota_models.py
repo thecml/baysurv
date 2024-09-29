@@ -254,9 +254,12 @@ if __name__ == "__main__":
                     else:
                         coverage_stats[percentage] = coverage(mtlr_times, upper_outputs, lower_outputs,
                                                               sanitized_t_test, sanitized_e_test)
-                data = [list(coverage_stats.keys()), list(coverage_stats.values())]
-                _, pvalue = chisquare(data)
-                c_calib = pvalue[0]
+                expected_percentages = coverage_stats.keys()
+                observed_percentages = coverage_stats.values()
+                expected = [x / sum(expected_percentages) * 100 for x in expected_percentages]
+                observed = [x / sum(observed_percentages) * 100 for x in observed_percentages]
+                _, p_value = chisquare(f_obs=observed, f_exp=expected)
+                c_calib = p_value
             else:
                 c_calib = 0
         
