@@ -205,14 +205,17 @@ if __name__ == "__main__":
                 surv_times = torch.from_numpy(surv_probs)
                 coverage_stats = {}
                 for percentage in credible_region_sizes:
-                    drop_num = math.floor(0.5 * n_samples_test * (1 - percentage))
+                    drop_num = math.floor(0.5 * config.n_samples_test * (1 - percentage))
                     lower_outputs = torch.kthvalue(surv_times, k=1 + drop_num, dim=0)[0]
-                    upper_outputs = torch.kthvalue(surv_times, k=n_samples_test - drop_num, dim=0)[0]
+                    upper_outputs = torch.kthvalue(surv_times, k=config.n_samples_test - drop_num, dim=0)[0]
                     coverage_stats[percentage] = coverage(event_times, upper_outputs, lower_outputs,
                                                           sanitized_t_test, sanitized_e_test)
-                data = [list(coverage_stats.keys()), list(coverage_stats.values())]
-                _, pvalue = chisquare(data)
-                c_calib = pvalue[0]
+                expected_percentages = coverage_stats.keys()
+                observed_percentages = coverage_stats.values()
+                expected = [x / sum(expected_percentages) * 100 for x in expected_percentages]
+                observed = [x / sum(observed_percentages) * 100 for x in observed_percentages]
+                _, p_value = chisquare(f_obs=observed, f_exp=expected)
+                c_calib = p_value
             else:
                 c_calib = 0
             
